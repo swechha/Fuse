@@ -19,6 +19,8 @@
 		BFB5AF5B182FC92700831B5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB5AF43182FC92500831B5C /* UIKit.framework */; };
 		BFB5AF63182FC92700831B5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFB5AF61182FC92700831B5C /* InfoPlist.strings */; };
 		BFB5AF65182FC92700831B5C /* FuseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5AF64182FC92700831B5C /* FuseTests.m */; };
+		BFB5AF6F182FC95600831B5C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB5AF6E182FC95600831B5C /* opencv2.framework */; };
+		BFB5AF74182FC9D000831B5C /* ImageFusion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFB5AF72182FC9D000831B5C /* ImageFusion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		BFB5AF60182FC92700831B5C /* FuseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FuseTests-Info.plist"; sourceTree = "<group>"; };
 		BFB5AF62182FC92700831B5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BFB5AF64182FC92700831B5C /* FuseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuseTests.m; sourceTree = "<group>"; };
+		BFB5AF6E182FC95600831B5C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../ios/opencv2.framework; sourceTree = "<group>"; };
+		BFB5AF72182FC9D000831B5C /* ImageFusion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageFusion.cpp; path = ../ImageFusion.cpp; sourceTree = "<group>"; };
+		BFB5AF73182FC9D000831B5C /* ImageFusion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageFusion.h; path = ../ImageFusion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB5AF6F182FC95600831B5C /* opencv2.framework in Frameworks */,
 				BFB5AF42182FC92500831B5C /* CoreGraphics.framework in Frameworks */,
 				BFB5AF44182FC92500831B5C /* UIKit.framework in Frameworks */,
 				BFB5AF40182FC92500831B5C /* Foundation.framework in Frameworks */,
@@ -96,6 +102,7 @@
 		BFB5AF3E182FC92500831B5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFB5AF6E182FC95600831B5C /* opencv2.framework */,
 				BFB5AF3F182FC92500831B5C /* Foundation.framework */,
 				BFB5AF41182FC92500831B5C /* CoreGraphics.framework */,
 				BFB5AF43182FC92500831B5C /* UIKit.framework */,
@@ -109,6 +116,8 @@
 			children = (
 				BFB5AF4E182FC92700831B5C /* AppDelegate.h */,
 				BFB5AF4F182FC92700831B5C /* AppDelegate.m */,
+				BFB5AF73182FC9D000831B5C /* ImageFusion.h */,
+				BFB5AF72182FC9D000831B5C /* ImageFusion.cpp */,
 				BFB5AF51182FC92700831B5C /* Images.xcassets */,
 				BFB5AF46182FC92600831B5C /* Supporting Files */,
 			);
@@ -239,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB5AF74182FC9D000831B5C /* ImageFusion.cpp in Sources */,
 				BFB5AF50182FC92700831B5C /* AppDelegate.m in Sources */,
 				BFB5AF4C182FC92600831B5C /* main.m in Sources */,
 			);
@@ -361,6 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/swechha/Dev/ios,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fuse/Fuse-Prefix.pch";
 				INFOPLIST_FILE = "Fuse/Fuse-Info.plist";
@@ -374,6 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/swechha/Dev/ios,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fuse/Fuse-Prefix.pch";
 				INFOPLIST_FILE = "Fuse/Fuse-Info.plist";
